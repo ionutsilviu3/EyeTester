@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.LoginController">
+   <children>
+      <AnchorPane fx:id="paneBackgroundLogin" layoutX="1.2999999523162842" layoutY="1.2999999523162842" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="640.0">
+         <children>
+            <AnchorPane fx:id="paneLogin" layoutX="160.0" layoutY="135.0" prefHeight="270.0" prefWidth="320.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button fx:id="buttonLogin" layoutX="136.0" layoutY="209.0" mnemonicParsing="false" onAction="#login" text="Log in">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                     </effect>
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textFieldUserLogin" layoutX="86.0" layoutY="98.0" style="-fx-background-color: transparent;" />
+                  <PasswordField fx:id="passFieldUserLogin" layoutX="86.0" layoutY="142.0" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </PasswordField>
+                  <Label alignment="CENTER" layoutY="45.0" prefHeight="15.0" prefWidth="320.0" text="EyeTester" textFill="#01a72b">
+                     <font>
+                        <Font name="Century" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="iconUser" fitHeight="25.0" fitWidth="23.0" layoutX="57.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/userIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="iconPassword" fitHeight="25.0" fitWidth="23.0" layoutX="57.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/passwordIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgViewExclamation" fitHeight="30.0" fitWidth="35.0" layoutX="145.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/exclamationIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="46.0" layoutX="188.0" layoutY="125.0" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+                  <Line endX="46.0" layoutX="188.0" layoutY="169.0" startX="-100.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="358.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToSignUp" text="Don't have an account ?" textFill="#858585">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonGoToSignUp" layoutX="543.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToSignUp" text="Sign up!" textFill="#84ee95">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+#paneBackgroundLogin, #paneBackgroundSignUp{
+   -fx-background-color: radial-gradient(center 50% 50% , radius 3000px, #202020, black);
+}
+
+#textFieldUserLogin, #passFieldUserLogin, #textFieldUserSignUp, #passFieldUserSignUp, #textFieldEmailSignUp{
+    -fx-text-fill: #01a72b;
+}
+
+#textFieldResultDescription{
+    -fx-text-fill: #01a72b;
+}
+
+.button {
+	-fx-background-color: transparent;
+    -fx-skin: "com.boancionut.eyetester.ScaleSkin";
+}
+
+#buttonLogin {
+    -fx-background-color: #01a72b;
+    -fx-background-radius: 8;
+}
+
+#buttonSignUp{
+    -fx-background-color: #84ee95;
+    -fx-background-radius: 8;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.SignUpController">
+   <children>
+      <AnchorPane fx:id="paneBackgroundSignUp" onMouseClicked="#showNoNeeds" prefHeight="540.0" prefWidth="640.0">
+         <children>
+            <AnchorPane fx:id="paneSignUp" layoutX="160.0" layoutY="135.0" onMouseClicked="#showNoNeeds" prefHeight="270.0" prefWidth="320.0" style="-fx-background-color: transparent;">
+               <children>
+                  <PasswordField fx:id="passFieldUserSignUp" layoutX="81.0" layoutY="175.0" onMouseClicked="#showNeedsPassword" prefHeight="43.0" prefWidth="165.0" promptText="Your precious password" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="textFieldUserSignUp" layoutX="81.0" layoutY="131.0" onMouseClicked="#showNeedsUsername" prefHeight="25.0" prefWidth="165.0" promptText="Your charming username" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="textFieldEmailSignUp" layoutX="81.0" layoutY="78.0" onMouseClicked="#showNeedsEmail" prefHeight="25.0" prefWidth="165.0" promptText="Your unique email address" style="-fx-background-color: transparent;">
+                     <font>
+                        <Font name="Century" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="buttonSignUp" layoutX="133.0" layoutY="231.0" mnemonicParsing="false" onAction="#signUp" text="Sign up" />
+                  <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="46.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/emailIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="51.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/userIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="51.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/passwordIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageViewWarningEmail" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/exclamationIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageViewWarningUsername" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/exclamationIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imageViewWarningPassword" fitHeight="25.0" fitWidth="25.0" layoutX="237.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/exclamationIcon.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="-7.0" layoutY="6.0" prefHeight="17.0" prefWidth="321.0" />
+                  <Label fx:id="labelFieldNeeds" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="74.0" prefWidth="320.0" text="Moments away from becoming even cooler!" textAlignment="CENTER" textFill="#84ee95" wrapText="true">
+                     <font>
+                        <Font name="Century" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="57.0" fill="BLACK" layoutX="182.0" layoutY="105.0" startX="-100.0" strokeLineCap="ROUND" />
+                  <Line endX="48.0" fill="BLACK" layoutX="190.0" layoutY="158.0" startX="-107.0" strokeLineCap="ROUND" />
+                  <Line endX="49.0" fill="BLACK" layoutX="190.0" layoutY="212.0" startX="-105.0" strokeLineCap="ROUND" />
+               </children>
+            </AnchorPane>
+            <Button layoutX="353.0" layoutY="11.0" mnemonicParsing="false" onAction="#goBackToLogin" text="Already have an account ?" textFill="#858585">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonGoToLogin" layoutX="555.0" layoutY="11.0" mnemonicParsing="false" onAction="#goBackToLogin" text="Log in!" textFill="#01a72b">
+               <font>
+                  <Font name="Century" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

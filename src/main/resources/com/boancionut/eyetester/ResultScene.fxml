@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.ResultController">
+   <children>
+      <AnchorPane fx:id="paneBackground" prefHeight="540.0" prefWidth="640.0">
+         <children>
+            <Label alignment="CENTER" layoutY="112.0" prefHeight="30.0" prefWidth="640.0" text="The result of the test is that you:" textFill="#858585">
+               <font>
+                  <Font name="Century" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="479.0" text="This is not a professional test, if you are unsure of the result, you should check a local doctor." textFill="RED" />
+            <Label layoutX="217.0" layoutY="203.0" text="Are not colorblind!" textFill="#858585">
+               <font>
+                  <Font name="Century" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="179.0" layoutY="410.0" mnemonicParsing="false" onAction="#goToTest" text="Test again!" textFill="#858585">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="14.0" layoutY="410.0" mnemonicParsing="false" onAction="#goToTest" text="Want to try again ?" textFill="#858585">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="538.0" layoutY="407.0" mnemonicParsing="false" onAction="#finish" text="Finish" textFill="#858585">
+               <font>
+                  <Font name="Century" size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textFieldResultDescription" alignment="TOP_LEFT" editable="false" layoutX="123.0" layoutY="239.0" prefHeight="118.0" prefWidth="374.0" style="-fx-background-color: transparent;" text="Your vision is healthy!">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

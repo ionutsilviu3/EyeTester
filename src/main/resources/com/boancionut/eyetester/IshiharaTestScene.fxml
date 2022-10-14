@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="640.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.IshiharaTestController">
+   <children>
+      <AnchorPane fx:id="paneBackground" prefHeight="540.0" prefWidth="640.0">
+         <children>
+            <ImageView fx:id="imageIshihara" fitHeight="150.0" fitWidth="200.0" layoutX="244.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/3_5.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonCorrect" layoutX="100.0" layoutY="379.0" mnemonicParsing="false" onAction="#correctAnswer" text="3" textFill="#e5c99f">
+               <font>
+                  <Font name="Century" size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonWrong" layoutX="483.0" layoutY="379.0" mnemonicParsing="false" onAction="#wrongAnswer" text="5" textFill="#e5c99f">
+               <font>
+                  <Font name="Century" size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonNone" layoutX="216.0" layoutY="454.0" mnemonicParsing="false" onAction="#noneAnswer" text="I don't see anything" textFill="#858585">
+               <font>
+                  <Font name="Century" size="20.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutY="56.0" prefHeight="17.0" prefWidth="640.0" text="What number do you see ?" textFill="#858585">
+               <font>
+                  <Font name="Century" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
