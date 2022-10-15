@@ -84,7 +84,7 @@ public class IshiharaTestController implements Initializable {
     }
 
     private void changePlate() {
-
+        moveButtons();
         /*if (answeredCounter < allishiharaPlates.size()) {
 
             int correct = allishiharaPlates.get(answeredCounter).getCorrectAns();

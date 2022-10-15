@@ -19,7 +19,7 @@ public class Main extends Application {
         stage.show();*/
         try {
             SceneController.setStage(primaryStage);
-            Parent root = FXMLLoader.load(Main.class.getResource("LoginScene.fxml"));
+            Parent root = FXMLLoader.load(Main.class.getResource("IshiharaTestScene.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             primaryStage.setScene(scene);
