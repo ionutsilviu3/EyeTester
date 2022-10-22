@@ -1,10 +1,9 @@
-/*
 package com.boancionut.eyetester.service;
 
 import com.boancionut.eyetester.dao.DiseaseDao;
 import com.boancionut.eyetester.entities.DiseaseEntity;
-import jakarta.persistence.Persistence;
 
+import javax.persistence.Persistence;
 import java.util.List;
 
 public class DiseaseService {
@@ -42,4 +41,3 @@ public class DiseaseService {
         return u;
     }
 }
-*/

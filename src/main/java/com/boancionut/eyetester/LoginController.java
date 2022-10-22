@@ -1,7 +1,8 @@
 package com.boancionut.eyetester;
-import java.net.URL;
-import java.util.ResourceBundle;
 
+
+import com.boancionut.eyetester.entities.PatientEntity;
+import com.boancionut.eyetester.service.PatientService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,6 +10,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
@@ -34,8 +38,7 @@ public class LoginController implements Initializable {
 
     @FXML
     private void login(ActionEvent event) {
-
-        /*PatientService patientService = new PatientService();
+        PatientService patientService = new PatientService();
         PatientEntity p = new PatientEntity();
 
         try {
@@ -49,8 +52,7 @@ public class LoginController implements Initializable {
         catch (Exception e) {
             imgViewExclamation.setVisible(true);
             e.printStackTrace();
-        }*/
-
+        }
     }
 
     @FXML

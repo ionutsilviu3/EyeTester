@@ -1,13 +1,23 @@
 package com.boancionut.eyetester;
 
+import com.boancionut.eyetester.entities.DiseaseEntity;
+import com.boancionut.eyetester.entities.IshiharaplateEntity;
+import com.boancionut.eyetester.entities.PatientEntity;
+import com.boancionut.eyetester.service.DiseaseService;
+import com.boancionut.eyetester.service.IshiharaPlateService;
+import com.boancionut.eyetester.service.PatientService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class IshiharaTestController implements Initializable {
@@ -26,9 +36,28 @@ public class IshiharaTestController implements Initializable {
     private int noneAnswersCounter = 0;
     private int answeredCounter = 0;
 
+    private Random rand = new Random();
+
+    private PatientService patientService;
+    private PatientEntity localPatient;
+
+    private IshiharaPlateService ishiharaPlateService;
+    private List<IshiharaplateEntity> allIshiharaPlates;
+
+    private DiseaseService diseaseService;
+    private List<DiseaseEntity> allDiseases;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         SceneController.fadeSceneIn(paneBackground);
+        localPatient = null;
+        patientService = new PatientService();
+        ishiharaPlateService = new IshiharaPlateService();
+        allIshiharaPlates = ishiharaPlateService.getAllIshiharaPlates();
+        Collections.shuffle(allIshiharaPlates);
+        diseaseService = new DiseaseService();
+        allDiseases = diseaseService.getAllDiseases();
+        changePlate();
     }
 
     @FXML
@@ -45,23 +74,23 @@ public class IshiharaTestController implements Initializable {
         } else if (wrongAnswersCounter >= 7 && correctAnswersCounter > 0) {
             System.out.println("Not yet implemented");
 
-            /*try {
+            try {
                 patientService.updateDisease(diseaseService.findDisease("Mild Colorblindness"),
                         LoginController.loggedID);
             } catch (Exception e) {
                 e.printStackTrace();
-            }*/
+            }
 
-            //SceneController.fadeSceneOut("ResultScene.fxml", paneBackground);
+            SceneController.fadeSceneOut("ResultScene.fxml", paneBackground);
         }
 
         else if (wrongAnswersCounter >= 7 && correctAnswersCounter <= 0) {
             System.out.println("Not yet implemented");
-            /*try {
+            try {
                 patientService.updateDisease(diseaseService.findDisease("Colorblind"), LoginController.loggedID);
             } catch (Exception e) {
                 e.printStackTrace();
-            }*/
+            }
         }
 
     }
@@ -72,30 +101,28 @@ public class IshiharaTestController implements Initializable {
             noneAnswersCounter++;
             changePlate();
         } else {
-            System.out.println("Not yet implemented");
-            /*try {
+            try {
                 patientService.updateDisease(diseaseService.findDisease("Colorblind"), LoginController.loggedID);
             } catch (Exception e) {
                 e.printStackTrace();
-            }*/
+            }
 
             SceneController.fadeSceneOut("ResultScene.fxml", paneBackground);
         }
     }
 
     private void changePlate() {
-        moveButtons();
-        /*if (answeredCounter < allishiharaPlates.size()) {
+        if (answeredCounter < allIshiharaPlates.size()) {
 
-            int correct = allishiharaPlates.get(answeredCounter).getCorrectAns();
-            int wrong = allishiharaPlates.get(answeredCounter).getWrongAns();
-            Image tempImg = new Image("/resources/images/" + correct + "_" + wrong + ".png");
+            int correct = allIshiharaPlates.get(answeredCounter).getCorrectAns();
+            int wrong = allIshiharaPlates.get(answeredCounter).getWrongAns();
+            Image tempImg = new Image(this.getClass().getResourceAsStream("images/" + correct + "_" + wrong + ".png"));
             imageIshihara.setImage(tempImg);
 
             buttonCorrect.setText(((Integer) correct).toString());
             buttonWrong.setText(((Integer) wrong).toString());
 
-            int random = rand.nextInt(allishiharaPlates.size());
+            int random = rand.nextInt(allIshiharaPlates.size());
             if (random % 2 == 0)
                 moveButtons();
 
@@ -110,8 +137,8 @@ public class IshiharaTestController implements Initializable {
                     e.printStackTrace();
                 }
 
-            SceneController.fadeSceneOut("/controllers/DiseaseResultScene.fxml", paneBackground);
-        }*/
+            SceneController.fadeSceneOut("ResultScene.fxml", paneBackground);
+        }
     }
 
     private void moveButtons() {

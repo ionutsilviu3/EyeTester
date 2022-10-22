@@ -1,15 +1,14 @@
-/*
 package com.boancionut.eyetester.dao;
 
 import com.boancionut.eyetester.entities.DiseaseEntity;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.TypedQuery;
-import jakarta.persistence.criteria.CriteriaBuilder;
-import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.ParameterExpression;
-import jakarta.persistence.criteria.Root;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 public class DiseaseDao extends GenericDao<DiseaseEntity> {
@@ -48,4 +47,3 @@ public class DiseaseDao extends GenericDao<DiseaseEntity> {
         return results;
     }
 }
-*/

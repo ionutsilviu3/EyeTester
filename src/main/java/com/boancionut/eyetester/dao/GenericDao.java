@@ -1,10 +1,9 @@
-/*
+
 package com.boancionut.eyetester.dao;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.criteria.CriteriaQuery;
 
-import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 public abstract class GenericDao<T> {
@@ -90,4 +89,3 @@ public abstract class GenericDao<T> {
         return null;
     }
 }
-*/

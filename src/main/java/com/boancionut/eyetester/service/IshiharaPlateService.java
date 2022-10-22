@@ -1,10 +1,9 @@
-/*
 package com.boancionut.eyetester.service;
 
 import com.boancionut.eyetester.dao.IshiharaPlateDao;
 import com.boancionut.eyetester.entities.IshiharaplateEntity;
-import jakarta.persistence.Persistence;
 
+import javax.persistence.Persistence;
 import java.util.List;
 
 public class IshiharaPlateService {
@@ -42,4 +41,3 @@ public class IshiharaPlateService {
         return u;
     }
 }
-*/
