@@ -59,7 +59,7 @@
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" layoutX="-7.0" layoutY="6.0" prefHeight="17.0" prefWidth="321.0" />
-                  <Label fx:id="labelFieldNeeds" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="74.0" prefWidth="320.0" text="Moments away from becoming even cooler!" textAlignment="CENTER" textFill="#84ee95" wrapText="true">
+                  <Label fx:id="labelFieldNeeds" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="74.0" prefWidth="320.0" text="Moments away from becoming even cooler!" textAlignment="CENTER" textFill="#0082c6" wrapText="true">
                      <font>
                         <Font name="Century" size="16.0" />
                      </font>

@@ -35,7 +35,7 @@ public class PatientService {
         return patientDao.findAll();
     }
 
-    public PatientEntity findPatientID(String id) throws Exception {
+    public PatientEntity findPatientID(int id) throws Exception {
         List<PatientEntity> patients = patientDao.findPatientID(id);
         if (patients.size() == 0) {
             throw new Exception("User not found!");

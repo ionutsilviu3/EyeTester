@@ -8,7 +8,7 @@ import java.util.Objects;
 public class PatientEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "patientID")
+    @Column(name = "patientId")
     private int patientId;
     @Basic
     @Column(name = "patientName")

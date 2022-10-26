@@ -1,6 +1,8 @@
 package com.boancionut.eyetester;
 
 
+import com.boancionut.eyetester.entities.PatientEntity;
+import com.boancionut.eyetester.service.PatientService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,13 +45,13 @@ public class SignUpController implements Initializable {
 
                 && RegexVerification.validatePassword(passFieldUserSignUp.getText()) == RegexVerification.state.VALID) {
 
-            /*PatientService patientService = new PatientService();
+            PatientService patientService = new PatientService();
             PatientEntity patient = new PatientEntity();
             patient.setEmail(textFieldEmailSignUp.getText());
             patient.setPatientName(textFieldUserSignUp.getText());
             patient.setPassword(passFieldUserSignUp.getText());
             patientService.addPatient(patient);
-            LoginController.loggedID = patientService.getAllPatients().size();*/
+            LoginController.loggedID = patientService.getAllPatients().size();
             SceneController.fadeSceneOut("IshiharaTestScene.fxml", paneBackgroundSignUp);
         }
         if(RegexVerification.validateUsername(textFieldUserSignUp.getText()) != RegexVerification.state.VALID)
@@ -97,6 +99,6 @@ public class SignUpController implements Initializable {
     private void showNoNeeds(MouseEvent event)
     {
         labelFieldNeeds.setText("Moments away from becoming even cooler!");
-        labelFieldNeeds.setTextFill(Color.web("#84ee95"));
+        labelFieldNeeds.setTextFill(Color.web("#0082c6"));
     }
 }

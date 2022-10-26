@@ -1,41 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.ResultController">
+<AnchorPane style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.boancionut.eyetester.ResultController">
    <children>
       <AnchorPane fx:id="paneBackground" prefHeight="540.0" prefWidth="640.0">
          <children>
-            <Label alignment="CENTER" layoutY="112.0" prefHeight="30.0" prefWidth="640.0" text="The result of the test is that you:" textFill="#858585">
+            <Label alignment="CENTER" layoutY="112.0" prefHeight="30.0" prefWidth="640.0" text="The result of the test is that you are:" textFill="#e5c99f">
+               <font>
+                  <Font name="Century Schoolbook" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutY="479.0" prefHeight="17.0" prefWidth="640.0" text="This is not a professional test, if you are unsure of the result, you should check a local doctor." textAlignment="CENTER" textFill="#858585">
+               <font>
+                  <Font name="Century" size="12.0" />
+               </font></Label>
+            <Label fx:id="labelResult" alignment="CENTER" layoutY="203.0" prefHeight="30.0" prefWidth="640.0" text="Are not colorblind!" textAlignment="CENTER" textFill="#01a72b">
                <font>
                   <Font name="Century" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="75.0" layoutY="479.0" text="This is not a professional test, if you are unsure of the result, you should check a local doctor." textFill="RED" />
-            <Label layoutX="217.0" layoutY="203.0" text="Are not colorblind!" textFill="#858585">
+            <Button fx:id="buttonResultTestAgain" layoutX="25.0" layoutY="401.0" mnemonicParsing="false" onAction="#goToTest" prefHeight="45.0" prefWidth="36.0" style="-fx-background-color: transparent;" textFill="#858585">
                <font>
-                  <Font name="Century" size="24.0" />
+                  <Font name="Century" size="16.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/testAgain.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttonResultFinish" layoutX="523.0" layoutY="408.0" mnemonicParsing="false" onAction="#finish" style="-fx-background-color: #e6574d;" text="Finish">
+               <font>
+                  <Font name="Century Schoolbook Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelDescription" alignment="TOP_CENTER" layoutX="217.0" layoutY="240.0" prefHeight="118.0" prefWidth="207.0" text="Seems like your eyes can handle colors pretty well!" textAlignment="CENTER" textFill="#858585" wrapText="true">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Label>
-            <Button layoutX="23.0" layoutY="412.0" mnemonicParsing="false" onAction="#goToTest" text="Test again!" textFill="#01a72b">
-               <font>
-                  <Font name="Century" size="16.0" />
-               </font>
-            </Button>
-            <Button layoutX="523.0" layoutY="408.0" mnemonicParsing="false" onAction="#finish" text="Finish" textFill="#e45046">
-               <font>
-                  <Font name="Century" size="20.0" />
-               </font>
-            </Button>
-            <TextField fx:id="textFieldResultDescription" alignment="TOP_CENTER" editable="false" layoutX="123.0" layoutY="239.0" prefHeight="118.0" prefWidth="374.0" style="-fx-background-color: transparent;" text="Your vision is healthy!">
-               <font>
-                  <Font name="Century" size="16.0" />
-               </font>
-            </TextField>
-            <Line endX="182.0" layoutX="320.0" layoutY="233.0" startX="-178.0" />
          </children>
       </AnchorPane>
    </children>

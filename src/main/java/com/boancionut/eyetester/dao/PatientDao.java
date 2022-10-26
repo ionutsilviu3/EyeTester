@@ -51,14 +51,14 @@ public class PatientDao extends GenericDao<PatientEntity> {
         em.close();
     }
 
-    public List<PatientEntity> findPatientID(String id) {
+    public List<PatientEntity> findPatientID(int id) {
         EntityManager em = getEntityManager();
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery<PatientEntity> q = cb.createQuery(PatientEntity.class);
 
         Root<PatientEntity> c = q.from(PatientEntity.class);
-        ParameterExpression<String> paramID = cb.parameter(String.class);
-        q.select(c).where(cb.equal(c.get("patientID"), paramID));
+        ParameterExpression<Integer> paramID = cb.parameter(Integer.class);
+        q.select(c).where(cb.equal(c.get("patientId"), paramID));
         TypedQuery<PatientEntity> query = em.createQuery(q);
         query.setParameter(paramID, id);
 

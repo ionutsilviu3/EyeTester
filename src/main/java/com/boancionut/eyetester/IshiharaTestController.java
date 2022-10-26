@@ -72,7 +72,7 @@ public class IshiharaTestController implements Initializable {
             wrongAnswersCounter++;
             changePlate();
         } else if (wrongAnswersCounter >= 7 && correctAnswersCounter > 0) {
-            System.out.println("Not yet implemented");
+
 
             try {
                 patientService.updateDisease(diseaseService.findDisease("Mild Colorblindness"),
@@ -85,7 +85,7 @@ public class IshiharaTestController implements Initializable {
         }
 
         else if (wrongAnswersCounter >= 7 && correctAnswersCounter <= 0) {
-            System.out.println("Not yet implemented");
+
             try {
                 patientService.updateDisease(diseaseService.findDisease("Colorblind"), LoginController.loggedID);
             } catch (Exception e) {
@@ -131,7 +131,7 @@ public class IshiharaTestController implements Initializable {
 
             if (correctAnswersCounter > 4)
                 try {
-                    patientService.updateDisease(diseaseService.findDisease("None"),
+                    patientService.updateDisease(diseaseService.findDisease("Healthy"),
                             LoginController.loggedID);
                 } catch (Exception e) {
                     e.printStackTrace();

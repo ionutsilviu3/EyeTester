@@ -2,10 +2,13 @@
    -fx-background-color: radial-gradient(center 50% 50% , radius 3000px, #202020, black);
 }
 
-#textFieldUserLogin, #passFieldUserLogin, #textFieldUserSignUp, #passFieldUserSignUp, #textFieldEmailSignUp{
+#textFieldUserLogin, #passFieldUserLogin{
     -fx-text-fill: #01a72b;
 }
 
+#textFieldUserSignUp, #passFieldUserSignUp, #textFieldEmailSignUp{
+    -fx-text-fill: #0082c6;
+}
 #textFieldResultDescription{
     -fx-text-fill: #01a72b;
 }
@@ -21,6 +24,16 @@
 }
 
 #buttonSignUp{
-    -fx-background-color: #84ee95;
+    -fx-background-color: #0082c6;
+    -fx-background-radius: 8;
+}
+
+#buttonResultTestAgain
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+}
+#buttonResultFinish {
+    -fx-background-color: #e45046;
     -fx-background-radius: 8;
 }

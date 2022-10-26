@@ -56,7 +56,7 @@
                   <Font name="Century" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="buttonGoToSignUp" layoutX="543.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToSignUp" text="Sign up!" textFill="#84ee95">
+            <Button fx:id="buttonGoToSignUp" layoutX="543.0" layoutY="11.0" mnemonicParsing="false" onAction="#goToSignUp" text="Sign up!" textFill="#0082c6">
                <font>
                   <Font name="Century" size="15.0" />
                </font>
